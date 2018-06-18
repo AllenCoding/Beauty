@@ -14,13 +14,15 @@
 #import "NoteViewController.h"
 #import "AboutViewController.h"
 #import "SettingViewController.h"
-
+#import "UserInfoViewController.h"
 
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
 @property(nonatomic,strong)NSMutableArray*data;
 @property(nonatomic,strong)UIView*headView;
+@property(nonatomic,strong)UILabel*desLabel;
+@property(nonatomic,strong)UIImageView*headIconView;
 @end
 
 @implementation MineViewController
@@ -41,13 +43,48 @@
 
 -(UIView *)headView{
     if (!_headView) {
-        _headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, kwidth, 180)];
+        
+        _headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, kwidth, 210)];
         _headView.backgroundColor=[UIColor groupTableViewBackgroundColor];
         
-        UIView*topView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, kwidth, 170)];
+        UIView*topView=[[UIView alloc]initWithFrame:CGRectMake(0, 10, kwidth, 190)];
         topView.backgroundColor=[UIColor whiteColor];
         [_headView addSubview:topView];
         
+        
+        UILabel*nickNameLabel=[UILabel labelWithFont:[UIFont systemFontOfSize:14] textColor:[UIColor darkGrayColor] textAlignment:NSTextAlignmentCenter];
+        nickNameLabel.frame=CGRectMake(5, 140, kwidth-10, 20);
+        [topView addSubview:nickNameLabel];
+        self.desLabel=nickNameLabel;
+        
+        UIImageView*icon=[[UIImageView alloc]initWithFrame:CGRectMake((kwidth-100)/2, 20, 100, 100)];
+        icon.layer.cornerRadius=50;
+        icon.userInteractionEnabled=YES;
+        if (isLogin) {
+            if ([[DataManager shareManager].userInfo.userHead isEqualToString:@"default"]) {
+                //默认头像
+                icon.image=[UIImageView getAppIcomImage];
+            }else{
+                //自定义
+                NSString*iconStr=[DataManager shareManager].userInfo.userHead;
+                icon.image=[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",HomePath,iconStr]];
+            }
+            nickNameLabel.text=[DataManager shareManager].userInfo.userDes;
+        }else{
+            icon.image=[UIImageView getAppIcomImage];
+            nickNameLabel.text=@"未登录";
+        }
+        
+        icon.layer.masksToBounds=YES;
+        [topView addSubview:icon];
+        self.headIconView=icon;
+        
+        UIButton*coverBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+        coverBtn.frame=CGRectMake(0, 0, kwidth, 190);
+        coverBtn.backgroundColor=[UIColor clearColor];
+        [coverBtn addTarget:self action:@selector(didClickOnUserInfo) forControlEvents:UIControlEventTouchUpInside];
+        [topView addSubview:coverBtn];
+    
     }
     return _headView;
 }
@@ -60,6 +97,16 @@
         [self presentViewController:nav animated:YES completion:^{
             self.tabBarController.selectedIndex=0;
         }];
+    }else{
+        if ([[DataManager shareManager].userInfo.userHead isEqualToString:@"default"]) {
+            //默认头像
+            self.headIconView.image=[UIImageView getAppIcomImage];
+        }else{
+            //自定义
+            NSString*iconStr=[DataManager shareManager].userInfo.userHead;
+            self.headIconView.image=[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",HomePath,iconStr]];
+        }
+        self.desLabel.text=[DataManager shareManager].userInfo.userDes;
     }
 }
 
@@ -87,19 +134,10 @@
     cell.imageView.contentMode=UIViewContentModeScaleAspectFill;
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     self.tableview.separatorStyle=UITableViewCellSeparatorStyleNone;
-
-//    if (indexPath.row==[self.data[indexPath.section] count]-1) {
-//        self.tableview.separatorStyle=UITableViewCellSeparatorStyleNone;
-//    }else{
-//        self.tableview.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
-//    }
-    
-//    NSLog(@"返回来的行数:%d",[self.data[indexPath.section] count]);
-    
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return section==0?180:10;
+    return section==0?210:10;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.001;
@@ -155,7 +193,6 @@
             default:{
                 //推荐好友
                 NSLog(@"推荐好友");
-                
             }
                 break;
         }
@@ -172,6 +209,15 @@
     }
     return nil;
 }
+
+-(void)didClickOnUserInfo{
+    NSLog(@"点击个人信息");
+    UserInfoViewController*user=[[UserInfoViewController alloc]init];
+    user.title=@"个人信息";
+    [self.navigationController pushViewController:user animated:YES];
+
+}
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -190,10 +236,7 @@
  
  
  
- 7.1  修改密码
- 7.2 清除缓存
- 7.3 退出登录
- 8.
+
 
  
 */

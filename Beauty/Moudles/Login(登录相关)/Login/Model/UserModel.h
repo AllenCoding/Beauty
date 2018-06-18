@@ -12,6 +12,7 @@
 
 @property(nonatomic,assign)NSInteger userId;//人员编号
 @property(nonatomic,copy)NSString*userPhone;//手机
+@property(nonatomic,copy)NSString*userPswd;//手机
 @property(nonatomic,copy)NSString*userNickname;//昵称
 @property(nonatomic,copy)NSString*userHead;//头像
 @property(nonatomic,copy)NSString*userSex;//性别

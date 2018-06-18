@@ -64,7 +64,7 @@ static DataManager*_manager;
 }
 
 -(void)createDatabase{
-    NSString*userSql=@"create table if not exists user(userId integer primary key autoincrement,userPhone text,userNickname text,userHead text,userSex text,userDes text)";
+    NSString*userSql=@"create table if not exists user(userId integer primary key autoincrement,userPhone text,userPswd,userNickname text,userHead text,userSex text,userDes text)";
     BOOL user=[dataBase executeUpdate:userSql];
     if (user) {
         NSLog(@"建表成功");
@@ -80,6 +80,7 @@ static DataManager*_manager;
     while ([set next]) {
         user.userId=[set stringForColumn:@"userId"].integerValue;
         user.userPhone=[set stringForColumn:@"userPhone"];
+        user.userPswd=[set stringForColumn:@"userPswd"];
         user.userNickname=[set stringForColumn:@"userNickname"];
         user.userSex=[set stringForColumn:@"userSex"];
         user.userHead=[set stringForColumn:@"userHead"];
@@ -88,8 +89,8 @@ static DataManager*_manager;
     return user;
 }
 -(void)userRegsiter:(UserModel*)user{
-    NSString*user_sql=@"insert into user (userPhone,userNickname,userSex,userHead,userDes) values(?,?,?,?,?)";
-    BOOL isOk=[dataBase executeUpdate:user_sql,user.userPhone,user.userNickname,user.userSex,user.userHead,user.userDes];
+    NSString*user_sql=@"insert into user (userPhone,userPswd,userNickname,userSex,userHead,userDes) values(?,?,?,?,?,?)";
+    BOOL isOk=[dataBase executeUpdate:user_sql,user.userPhone,user.userPswd,user.userNickname,user.userSex,user.userHead,user.userDes];
     if (isOk) {
         NSLog(@"用户注册成功");
     }else{

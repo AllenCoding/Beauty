@@ -34,7 +34,7 @@
 /**
  *  判断合法手机
  */
-- (BOOL)isValidateMobile:(NSString *)mobileNum;
++ (BOOL)isValidateMobile:(NSString *)mobileNum;
 /**
  *  判断邮箱
  */

@@ -26,6 +26,7 @@
 #import <SMS_SDK/SMSSDK.h>
 
 
+
 #import "HomeViewController.h"
 #import "MineViewController.h"
 #import "WelfareViewController.h"
@@ -42,6 +43,7 @@
 #import <objc/message.h>
 #import "DataManager.h"
 #import "UserModel.h"
+#import "MainTabbar.h"
 
 
 

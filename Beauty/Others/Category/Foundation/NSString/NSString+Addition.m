@@ -42,7 +42,7 @@
 +(NSString *)now{
     NSDate*date=[NSDate date];
     NSDateFormatter*dateFormatter=[[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"YYYYMMdd"];
+    [dateFormatter setDateFormat:@"YYYYMMddHHmmss"];
     NSString*dateStr=[dateFormatter stringFromDate:date];
     return dateStr;
 }
@@ -94,7 +94,7 @@
 }
 
 // 判断手机号
-- (BOOL)isValidateMobile:(NSString *)mobileNum {
++(BOOL)isValidateMobile:(NSString *)mobileNum {
     /**
      * 手机号码
      * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188

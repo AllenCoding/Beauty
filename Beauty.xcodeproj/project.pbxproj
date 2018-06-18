@@ -91,6 +91,8 @@
 		9FDDAC3820D3AA920059B529 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDAC3620D3AA910059B529 /* RegisterViewController.m */; };
 		9FDDAC4120D3B5470059B529 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDAC4020D3B5470059B529 /* UserModel.m */; };
 		9FDDAC4420D3B5F50059B529 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDAC4320D3B5F50059B529 /* DataManager.m */; };
+		9FE812A020D7DE56002A70F3 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8129E20D7DE56002A70F3 /* UserInfoViewController.m */; };
+		9FE812A120D7DE56002A70F3 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE8129F20D7DE56002A70F3 /* UserInfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +257,9 @@
 		9FDDAC4020D3B5470059B529 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		9FDDAC4220D3B5F50059B529 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		9FDDAC4320D3B5F50059B529 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		9FE8129D20D7DE56002A70F3 /* UserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		9FE8129E20D7DE56002A70F3 /* UserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		9FE8129F20D7DE56002A70F3 /* UserInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		E39B7A76D052C0B7AE646600 /* libPods-Beauty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Beauty.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -449,6 +454,9 @@
 				9FC312E920C652D500AA66C1 /* MineViewController.h */,
 				9FC312EA20C652D500AA66C1 /* MineViewController.m */,
 				9FC312EB20C652D500AA66C1 /* MineViewController.xib */,
+				9FE8129D20D7DE56002A70F3 /* UserInfoViewController.h */,
+				9FE8129E20D7DE56002A70F3 /* UserInfoViewController.m */,
+				9FE8129F20D7DE56002A70F3 /* UserInfoViewController.xib */,
 				9FD3F4D720CBCCBA00C5EE19 /* FavoriteViewController.h */,
 				9FD3F4D820CBCCBA00C5EE19 /* FavoriteViewController.m */,
 				9FD3F4D920CBCCBA00C5EE19 /* FavoriteViewController.xib */,
@@ -1087,6 +1095,7 @@
 				9FCA4C7020C8164300F389A1 /* error.png in Resources */,
 				9F02EBBD20C4DD3E00A57AA1 /* HomeViewController.xib in Resources */,
 				9FD3F4F920CBCD3D00C5EE19 /* AboutViewController.xib in Resources */,
+				9FE812A120D7DE56002A70F3 /* UserInfoViewController.xib in Resources */,
 				9FCA4C7A20C8339300F389A1 /* HomeCell.xib in Resources */,
 				9FCA4C7420C8164300F389A1 /* success@2x.png in Resources */,
 				9FD3F4E020CBCCD000C5EE19 /* SettingViewController.xib in Resources */,
@@ -1193,6 +1202,7 @@
 				9FDDAC3320D3AA880059B529 /* ForgetViewController.m in Sources */,
 				9FD3F4C320CB879F00C5EE19 /* EssenceCell.m in Sources */,
 				9FCA4C9420C8E5EA00F389A1 /* EssenceTool.m in Sources */,
+				9FE812A020D7DE56002A70F3 /* UserInfoViewController.m in Sources */,
 				9FC312F420C6573000AA66C1 /* CustomTabbar.m in Sources */,
 				9FCA4C5A20C8164300F389A1 /* NSString+Safety.m in Sources */,
 				9FC312E020C638A800AA66C1 /* HomeData.m in Sources */,

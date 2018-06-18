@@ -19,6 +19,7 @@
 #define DT_TOP_ACTIVE_SPACE IOS11_OR_LATER_SPACE(MAX(0, DT_KEY_WINDOW.safeAreaInsets.top-20))
 #define DT_BOTTOM_SPACE IOS11_OR_LATER_SPACE(DT_KEY_WINDOW.safeAreaInsets.bottom)
 #define kStatusBarHeight (kheight ==812? 44 : 20)
+#define HomePath    [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 
 

@@ -10,7 +10,7 @@
 #import "ForgetViewController.h"
 #import "RegisterViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *bgView;
 @property (strong, nonatomic) IBOutlet UIImageView *iconView;
@@ -27,7 +27,11 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.accountTextFiled resignFirstResponder];
+    [self.pswTextFiled resignFirstResponder];
 
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -70,13 +74,41 @@
     
 }
 
-
-
 - (IBAction)loginClick:(UIButton *)sender {
     NSLog(@"点击登录");
-    [MBProgressHUD showSuccess:@"登录成功"];
+    [[NSUserDefaults standardUserDefaults]setObject:self.accountTextFiled.text forKey:@"userPhone"];
     
+    if (self.accountTextFiled.text.length&&[NSString isValidateMobile:self.accountTextFiled.text]) {
+        if (self.pswTextFiled.text.length) {
+            if ([[DataManager shareManager]isExistWithPhone:self.accountTextFiled.text]) {
+                if ([[[DataManager shareManager] userInfo].userPswd isEqualToString:self.pswTextFiled.text]) {
+                    [MBProgressHUD showMessage:@""];
+                    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(loginOk) userInfo:nil repeats:NO];
+                }else{
+                    [MBProgressHUD showError:@"账号或密码错误"];
+                }
+            }else{
+                [MBProgressHUD showError:@"账号不存在"];
+            }
+        }else{
+            [MBProgressHUD showError:@"请输入密码"];
+        }
+    }else{
+        if (!self.accountTextFiled.text.length) {
+            [MBProgressHUD showError:@"请输入手机号"];
+        }else{
+            [MBProgressHUD showError:@"请输入正确手机号"];
+        }
+    }
 }
+
+-(void)loginOk{
+    [MBProgressHUD hideHUD];
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.accountTextFiled resignFirstResponder];
@@ -84,10 +116,6 @@
     [self.view endEditing:YES];
     
 }
-
-
-
-
 
 
 
