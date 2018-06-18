@@ -7,8 +7,10 @@
 //
 
 #import "UserInfoViewController.h"
+#import "LYCustomAlertView.h"
+#import "SetInfoViewController.h"
 
-@interface UserInfoViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface UserInfoViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,LYCustomAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *scrollviewHeight;
 @property (strong, nonatomic) IBOutlet UIImageView *profileView;
 @property (strong, nonatomic) IBOutlet UILabel *nickNameLabel;
@@ -16,10 +18,20 @@
 @property (strong, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (strong, nonatomic) IBOutlet UILabel *desLabel;
 @property(nonatomic,strong)UIImagePickerController*imagePicker;
+@property(nonatomic,strong)LYCustomAlertView*sexAlert;
 
 @end
 
 @implementation UserInfoViewController
+
+-(LYCustomAlertView *)sexAlert{
+    if (!_sexAlert) {
+        _sexAlert=[[LYCustomAlertView alloc]init];
+        _sexAlert.delegate=self;
+        _sexAlert.dataSource=[NSMutableArray arrayWithObjects:@"男",@"女",@"保密", nil];
+    }
+    return _sexAlert;
+}
 
 -(UIImagePickerController *)imagePicker{
     if (!_imagePicker) {
@@ -81,12 +93,19 @@
         }
             break;
         case 996:{
-            
             //换昵称
+            SetInfoViewController*ivc=[[SetInfoViewController alloc]init];
+            ivc.type=1;
+            ivc.callBlock = ^(NSString *text) {
+                self.nickNameLabel.text=text;
+            };
+            [self.navigationController pushViewController:ivc animated:YES];
         }
             break;
         case 997:{
             //换性别
+            [self presentViewController:self.sexAlert animated:YES completion:nil];
+
         }
             break;
         case 998:{
@@ -96,7 +115,12 @@
             break;
         default:{
             //换签名
-            
+            SetInfoViewController*ivc=[[SetInfoViewController alloc]init];
+            ivc.type=2;
+            ivc.callBlock = ^(NSString *text) {
+                self.desLabel.text=text;
+            };
+            [self.navigationController pushViewController:ivc animated:YES];
         }
             break;
     }
@@ -111,6 +135,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+#pragma mark LYCustomAlertViewDelegate
+-(void)LYCustomAlertView:(LYCustomAlertView *)alertView didSelectAlertResult:(NSString *)result{
+    if (alertView==self.sexAlert) {
+        self.sexLabel.text=result;
+        [[DataManager shareManager] updateUserInfoWithKey:@"userSex" AndValue:result];
+    }
+}
+
 
 - (void)saveImage:(UIImage *)currentImage withName:(NSString *)imageName{
     NSData *imageData = UIImageJPEGRepresentation(currentImage, 0.8);

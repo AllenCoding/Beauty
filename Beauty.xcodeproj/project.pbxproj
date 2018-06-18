@@ -93,6 +93,10 @@
 		9FDDAC4420D3B5F50059B529 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDAC4320D3B5F50059B529 /* DataManager.m */; };
 		9FE812A020D7DE56002A70F3 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8129E20D7DE56002A70F3 /* UserInfoViewController.m */; };
 		9FE812A120D7DE56002A70F3 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE8129F20D7DE56002A70F3 /* UserInfoViewController.xib */; };
+		9FE812A520D7ECDC002A70F3 /* LYCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE812A320D7ECDC002A70F3 /* LYCustomAlertView.m */; };
+		9FE812A620D7ECDC002A70F3 /* LYCustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE812A420D7ECDC002A70F3 /* LYCustomAlertView.xib */; };
+		9FE812AA20D7EE6B002A70F3 /* SetInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE812A820D7EE6B002A70F3 /* SetInfoViewController.m */; };
+		9FE812AB20D7EE6B002A70F3 /* SetInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE812A920D7EE6B002A70F3 /* SetInfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +264,12 @@
 		9FE8129D20D7DE56002A70F3 /* UserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		9FE8129E20D7DE56002A70F3 /* UserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		9FE8129F20D7DE56002A70F3 /* UserInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		9FE812A220D7ECDC002A70F3 /* LYCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCustomAlertView.h; sourceTree = "<group>"; };
+		9FE812A320D7ECDC002A70F3 /* LYCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCustomAlertView.m; sourceTree = "<group>"; };
+		9FE812A420D7ECDC002A70F3 /* LYCustomAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCustomAlertView.xib; sourceTree = "<group>"; };
+		9FE812A720D7EE6B002A70F3 /* SetInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetInfoViewController.h; sourceTree = "<group>"; };
+		9FE812A820D7EE6B002A70F3 /* SetInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetInfoViewController.m; sourceTree = "<group>"; };
+		9FE812A920D7EE6B002A70F3 /* SetInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetInfoViewController.xib; sourceTree = "<group>"; };
 		E39B7A76D052C0B7AE646600 /* libPods-Beauty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Beauty.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -478,6 +488,9 @@
 				9FD3F4F520CBCD3D00C5EE19 /* AboutViewController.h */,
 				9FD3F4F620CBCD3D00C5EE19 /* AboutViewController.m */,
 				9FD3F4F720CBCD3D00C5EE19 /* AboutViewController.xib */,
+				9FE812A720D7EE6B002A70F3 /* SetInfoViewController.h */,
+				9FE812A820D7EE6B002A70F3 /* SetInfoViewController.m */,
+				9FE812A920D7EE6B002A70F3 /* SetInfoViewController.xib */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -492,6 +505,9 @@
 		9FC312E820C652C100AA66C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9FE812A220D7ECDC002A70F3 /* LYCustomAlertView.h */,
+				9FE812A320D7ECDC002A70F3 /* LYCustomAlertView.m */,
+				9FE812A420D7ECDC002A70F3 /* LYCustomAlertView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1109,10 +1125,12 @@
 				9FCA4C7320C8164300F389A1 /* success.png in Resources */,
 				9F0DC9AE20CE0D5700A15A71 /* NoteView.xib in Resources */,
 				9FD3F4C920CBB28200C5EE19 /* TypeView.xib in Resources */,
+				9FE812AB20D7EE6B002A70F3 /* SetInfoViewController.xib in Resources */,
 				9FCA4BFE20C7B4CA00F389A1 /* WelfareCell.xib in Resources */,
 				9FCA4C0320C7C8E400F389A1 /* PopView.xib in Resources */,
 				9FC312ED20C652D500AA66C1 /* MineViewController.xib in Resources */,
 				9FCA4C7F20C899B200F389A1 /* topicCell.xib in Resources */,
+				9FE812A620D7ECDC002A70F3 /* LYCustomAlertView.xib in Resources */,
 				9FD3F4EA20CBCCEF00C5EE19 /* DownloadViewController.xib in Resources */,
 				9FD3F4EF20CBCD1F00C5EE19 /* ContributeViewController.xib in Resources */,
 				9FD3F4E520CBCCE000C5EE19 /* FootPrintViewController.xib in Resources */,
@@ -1210,6 +1228,7 @@
 				9FCA4C5B20C8164300F389A1 /* UIColor+Addition.m in Sources */,
 				9F0DC9AD20CE0D5700A15A71 /* NoteView.m in Sources */,
 				9FD3F4E920CBCCEF00C5EE19 /* DownloadViewController.m in Sources */,
+				9FE812A520D7ECDC002A70F3 /* LYCustomAlertView.m in Sources */,
 				9FCA4C1220C8157C00F389A1 /* NavgationBarController.m in Sources */,
 				9FCA4C0D20C814C100F389A1 /* BaseWebViewController.m in Sources */,
 				9F02EB9120C4DA5D00A57AA1 /* main.m in Sources */,
@@ -1235,6 +1254,7 @@
 				9FCA4C5E20C8164300F389A1 /* UIButton+Addition.m in Sources */,
 				9FC3130520C66A4B00AA66C1 /* WelfareViewController.m in Sources */,
 				9FD3F4F320CBCD2B00C5EE19 /* NoteViewController.m in Sources */,
+				9FE812AA20D7EE6B002A70F3 /* SetInfoViewController.m in Sources */,
 				9FCA4C6320C8164300F389A1 /* UIView+Layer.m in Sources */,
 				9FCA4C7920C8339300F389A1 /* HomeCell.m in Sources */,
 				9FCA4C8320C89E0400F389A1 /* ArticleCell.m in Sources */,
