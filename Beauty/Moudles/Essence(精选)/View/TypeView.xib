@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TypeView">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyS-6m-vvG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="emptyClick:" destination="-1" eventType="touchUpInside" id="G6v-Nb-HDJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="995" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoE-Ha-lps">
+                    <rect key="frame" x="237" y="383" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.020027680320000001" green="0.86967629189999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="拓展资源"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectTypeWithTag:" destination="-1" eventType="touchUpInside" id="Igr-pt-ivk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="994" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqM-ke-MUM">
+                    <rect key="frame" x="147" y="383.5" width="80" height="80"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="瞎推荐"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectTypeWithTag:" destination="-1" eventType="touchUpInside" id="Mlj-cE-gnq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="993" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zix-gZ-Rhw">
+                    <rect key="frame" x="57.5" y="383" width="80" height="80"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="前端"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectTypeWithTag:" destination="-1" eventType="touchUpInside" id="Hep-py-7Vv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="992" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMQ-6d-av4">
+                    <rect key="frame" x="237.5" y="293" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.62352941179999999" green="0.1529411765" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Andriod"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectTypeWithTag:" destination="-1" eventType="touchUpInside" id="7AL-c5-3Wu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uM-h1-UkF">
+                    <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.80000000000000004" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="JEn-eU-SPh"/>
+                        <constraint firstAttribute="width" constant="80" id="gQY-QI-zeA"/>
+                    </constraints>
+                    <state key="normal" title="iOS"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectTypeWithTag:" destination="-1" eventType="touchUpInside" id="P87-rP-3tr"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择您感兴趣的精选吧！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnD-0W-OjW">
+                    <rect key="frame" x="10" y="213" width="355" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="GcO-r8-F4f"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="990" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3l-RV-pWX">
+                    <rect key="frame" x="57.5" y="293" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.1647058824" green="0.74117647060000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="bcp-GV-UFP"/>
+                    </constraints>
+                    <state key="normal" title="App"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectTypeWithTag:" destination="-1" eventType="touchUpInside" id="aXh-Fv-VtI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NMQ-6d-av4" firstAttribute="centerY" secondItem="8uM-h1-UkF" secondAttribute="centerY" id="2bz-AY-UCu"/>
+                <constraint firstItem="Zix-gZ-Rhw" firstAttribute="height" secondItem="y3l-RV-pWX" secondAttribute="height" id="5dZ-zF-AKS"/>
+                <constraint firstItem="XoE-Ha-lps" firstAttribute="height" secondItem="WqM-ke-MUM" secondAttribute="height" id="9jD-Yj-Hri"/>
+                <constraint firstItem="eyS-6m-vvG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ad7-HO-8df"/>
+                <constraint firstItem="XoE-Ha-lps" firstAttribute="leading" secondItem="WqM-ke-MUM" secondAttribute="trailing" constant="10" id="Azi-8d-k0q"/>
+                <constraint firstItem="Zix-gZ-Rhw" firstAttribute="top" secondItem="y3l-RV-pWX" secondAttribute="bottom" constant="10" id="BP5-VZ-xEU"/>
+                <constraint firstItem="eyS-6m-vvG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="D2J-8M-dKa"/>
+                <constraint firstItem="WqM-ke-MUM" firstAttribute="width" secondItem="8uM-h1-UkF" secondAttribute="width" id="FTO-vG-Wx4"/>
+                <constraint firstAttribute="trailing" secondItem="bnD-0W-OjW" secondAttribute="trailing" constant="10" id="FfM-BN-hUs"/>
+                <constraint firstItem="y3l-RV-pWX" firstAttribute="width" secondItem="8uM-h1-UkF" secondAttribute="width" id="IuC-89-nA8"/>
+                <constraint firstItem="y3l-RV-pWX" firstAttribute="top" secondItem="bnD-0W-OjW" secondAttribute="bottom" constant="60" id="Pjs-AN-mxO"/>
+                <constraint firstItem="y3l-RV-pWX" firstAttribute="height" secondItem="8uM-h1-UkF" secondAttribute="height" id="W2v-qz-CS0"/>
+                <constraint firstItem="WqM-ke-MUM" firstAttribute="centerX" secondItem="8uM-h1-UkF" secondAttribute="centerX" id="WaS-hH-75i"/>
+                <constraint firstItem="WqM-ke-MUM" firstAttribute="height" secondItem="8uM-h1-UkF" secondAttribute="height" id="WdZ-V5-THK"/>
+                <constraint firstItem="NMQ-6d-av4" firstAttribute="leading" secondItem="8uM-h1-UkF" secondAttribute="trailing" constant="10" id="bCi-AV-9q4"/>
+                <constraint firstItem="bnD-0W-OjW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="cdR-Xa-AjI"/>
+                <constraint firstAttribute="bottom" secondItem="eyS-6m-vvG" secondAttribute="bottom" id="gCt-gf-MGx"/>
+                <constraint firstItem="8uM-h1-UkF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ghY-mf-6VC"/>
+                <constraint firstItem="8uM-h1-UkF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gwd-ZI-rya"/>
+                <constraint firstItem="Zix-gZ-Rhw" firstAttribute="width" secondItem="y3l-RV-pWX" secondAttribute="width" id="hMb-WB-3vm"/>
+                <constraint firstItem="XoE-Ha-lps" firstAttribute="top" secondItem="NMQ-6d-av4" secondAttribute="bottom" constant="10" id="hTY-uL-7wb"/>
+                <constraint firstItem="XoE-Ha-lps" firstAttribute="width" secondItem="WqM-ke-MUM" secondAttribute="width" id="jCL-sx-GoL"/>
+                <constraint firstAttribute="trailing" secondItem="eyS-6m-vvG" secondAttribute="trailing" id="jJ7-Cw-tjv"/>
+                <constraint firstItem="NMQ-6d-av4" firstAttribute="width" secondItem="8uM-h1-UkF" secondAttribute="width" id="k1L-cc-07I"/>
+                <constraint firstItem="y3l-RV-pWX" firstAttribute="centerY" secondItem="8uM-h1-UkF" secondAttribute="centerY" id="lyS-SL-ZLi"/>
+                <constraint firstItem="Zix-gZ-Rhw" firstAttribute="trailing" secondItem="y3l-RV-pWX" secondAttribute="trailing" id="mZE-TX-g8P"/>
+                <constraint firstItem="8uM-h1-UkF" firstAttribute="leading" secondItem="y3l-RV-pWX" secondAttribute="trailing" constant="10" id="wdn-gL-U4f"/>
+                <constraint firstItem="WqM-ke-MUM" firstAttribute="top" secondItem="8uM-h1-UkF" secondAttribute="bottom" constant="10" id="x6U-WT-cHf"/>
+                <constraint firstItem="NMQ-6d-av4" firstAttribute="height" secondItem="8uM-h1-UkF" secondAttribute="height" id="xwQ-Gv-WwL"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
