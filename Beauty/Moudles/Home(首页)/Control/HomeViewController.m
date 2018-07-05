@@ -88,6 +88,10 @@
     [self refreshDown];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshTableViewData) name:@"MainTabBarDidClickNotification" object:nil];
     [[UIApplication sharedApplication].keyWindow addSubview:self.floatBtn];
+    
+    
+    
+    
 
 }
 
@@ -187,6 +191,9 @@
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

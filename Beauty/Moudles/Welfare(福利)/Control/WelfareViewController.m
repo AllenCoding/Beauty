@@ -66,7 +66,6 @@
 
 /*加载数据源*/
 -(void)loadData{
-    
     WelfareTool *tool=[[WelfareTool alloc]init];
     tool.page=self.page;
     [tool getWelfareDataSuccess:^(id list) {
@@ -100,7 +99,6 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     WelfareModel*model=self.data[indexPath.row];
     NSLog(@"点击的是:%@---id=%@",model.createdAt,model._id);
-    
     PopView*pop=[[PopView alloc]init];
     pop.welfare=self.data[indexPath.row];
     [self presentViewController:pop animated:NO completion:nil];    

@@ -10,8 +10,6 @@
 #import "FavoriteViewController.h"
 #import "DownloadViewController.h"
 #import "ContributeViewController.h"
-#import "FootPrintViewController.h"
-#import "NoteViewController.h"
 #import "AboutViewController.h"
 #import "SettingViewController.h"
 #import "UserInfoViewController.h"
@@ -34,7 +32,6 @@
     if (!_data) {
         NSArray*dataSource=@[
                              @[@{@"title":@"我的收藏",@"icon":@""},@{@"title":@"我的下载",@"icon":@""},@{@"title":@"我的投稿",@"icon":@""}],
-                             @[@{@"title":@"我的足迹",@"icon":@""},@{@"title":@"我的笔记",@"icon":@""}],
                              @[@{@"title":@"关于我们",@"icon":@""},@{@"title":@"我的设置",@"icon":@""},@{@"title":@"推荐给好友",@"icon":@""}]];
         _data=[NSMutableArray arrayWithArray:dataSource];
     }
@@ -117,7 +114,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return self.data.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.data[section] count];
@@ -168,33 +165,24 @@
     }else if (indexPath.section==1){
         switch (indexPath.row) {
             case 0:{
-                //我的足迹
-                vc=[[FootPrintViewController alloc]init];
-            }
-                break;
-            default:{
-                //我的笔记
-                vc=[[NoteViewController alloc]init];
-            }
-                break;
-        }
-    }else{
-        switch (indexPath.row) {
-            case 0:{
                 //关于我们
                 vc=[[AboutViewController alloc]init];
             }
                 break;
+                
             case 1:{
                 //我的设置
                 vc=[[SettingViewController alloc]init];
             }
                 break;
+                
             default:{
                 //推荐好友
                 NSLog(@"推荐好友");
             }
                 break;
+                
+                
         }
     }
     if (vc!=nil) {

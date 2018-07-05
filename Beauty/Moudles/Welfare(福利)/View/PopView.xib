@@ -46,7 +46,9 @@
                                 <constraint firstAttribute="height" constant="25" id="uzQ-xd-b4m"/>
                             </constraints>
                             <state key="normal" image="download_normal"/>
+                            <state key="disabled" image="download_selected"/>
                             <state key="selected" image="download_selected"/>
+                            <state key="highlighted" image="download_selected"/>
                             <connections>
                                 <action selector="PopViewClickAction:" destination="-1" eventType="touchUpInside" id="0l1-ph-hLa"/>
                             </connections>

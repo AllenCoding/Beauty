@@ -75,7 +75,9 @@
 }
 
 - (IBAction)loginClick:(UIButton *)sender {
+  
     NSLog(@"点击登录");
+    
     [[NSUserDefaults standardUserDefaults]setObject:self.accountTextFiled.text forKey:@"userPhone"];
     
     if (self.accountTextFiled.text.length&&[NSString isValidateMobile:self.accountTextFiled.text]) {

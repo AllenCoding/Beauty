@@ -20,6 +20,7 @@
 		9F0DC9AE20CE0D5700A15A71 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DC9AC20CE0D5700A15A71 /* NoteView.xib */; };
 		9F0DC9B520CFB9F300A15A71 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DC9B320CFB9F300A15A71 /* LoginViewController.m */; };
 		9F0DC9B620CFB9F300A15A71 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DC9B420CFB9F300A15A71 /* LoginViewController.xib */; };
+		9F413C3D20E622E900B63077 /* CustomImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F413C3C20E622E900B63077 /* CustomImageBrowser.m */; };
 		9FC312E020C638A800AA66C1 /* HomeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC312DF20C638A800AA66C1 /* HomeData.m */; };
 		9FC312E320C63AE700AA66C1 /* topScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC312E220C63AE700AA66C1 /* topScrollView.m */; };
 		9FC312EC20C652D500AA66C1 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC312EA20C652D500AA66C1 /* MineViewController.m */; };
@@ -75,14 +76,10 @@
 		9FD3F4DB20CBCCBA00C5EE19 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3F4D920CBCCBA00C5EE19 /* FavoriteViewController.xib */; };
 		9FD3F4DF20CBCCD000C5EE19 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3F4DD20CBCCD000C5EE19 /* SettingViewController.m */; };
 		9FD3F4E020CBCCD000C5EE19 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3F4DE20CBCCD000C5EE19 /* SettingViewController.xib */; };
-		9FD3F4E420CBCCE000C5EE19 /* FootPrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3F4E220CBCCE000C5EE19 /* FootPrintViewController.m */; };
-		9FD3F4E520CBCCE000C5EE19 /* FootPrintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3F4E320CBCCE000C5EE19 /* FootPrintViewController.xib */; };
 		9FD3F4E920CBCCEF00C5EE19 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3F4E720CBCCEF00C5EE19 /* DownloadViewController.m */; };
 		9FD3F4EA20CBCCEF00C5EE19 /* DownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3F4E820CBCCEF00C5EE19 /* DownloadViewController.xib */; };
 		9FD3F4EE20CBCD1F00C5EE19 /* ContributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3F4EC20CBCD1F00C5EE19 /* ContributeViewController.m */; };
 		9FD3F4EF20CBCD1F00C5EE19 /* ContributeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3F4ED20CBCD1F00C5EE19 /* ContributeViewController.xib */; };
-		9FD3F4F320CBCD2B00C5EE19 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3F4F120CBCD2B00C5EE19 /* NoteViewController.m */; };
-		9FD3F4F420CBCD2B00C5EE19 /* NoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3F4F220CBCD2B00C5EE19 /* NoteViewController.xib */; };
 		9FD3F4F820CBCD3D00C5EE19 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3F4F620CBCD3D00C5EE19 /* AboutViewController.m */; };
 		9FD3F4F920CBCD3D00C5EE19 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3F4F720CBCD3D00C5EE19 /* AboutViewController.xib */; };
 		9FDDAC3220D3AA880059B529 /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDDAC2F20D3AA870059B529 /* ForgetViewController.xib */; };
@@ -143,6 +140,8 @@
 		9F0DC9B220CFB9F300A15A71 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9F0DC9B320CFB9F300A15A71 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9F0DC9B420CFB9F300A15A71 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9F413C3B20E622E900B63077 /* CustomImageBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomImageBrowser.h; sourceTree = "<group>"; };
+		9F413C3C20E622E900B63077 /* CustomImageBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomImageBrowser.m; sourceTree = "<group>"; };
 		9FC312DE20C638A800AA66C1 /* HomeData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeData.h; sourceTree = "<group>"; };
 		9FC312DF20C638A800AA66C1 /* HomeData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeData.m; sourceTree = "<group>"; };
 		9FC312E120C63AE700AA66C1 /* topScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = topScrollView.h; sourceTree = "<group>"; };
@@ -236,18 +235,12 @@
 		9FD3F4DC20CBCCD000C5EE19 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		9FD3F4DD20CBCCD000C5EE19 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		9FD3F4DE20CBCCD000C5EE19 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
-		9FD3F4E120CBCCE000C5EE19 /* FootPrintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootPrintViewController.h; sourceTree = "<group>"; };
-		9FD3F4E220CBCCE000C5EE19 /* FootPrintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootPrintViewController.m; sourceTree = "<group>"; };
-		9FD3F4E320CBCCE000C5EE19 /* FootPrintViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootPrintViewController.xib; sourceTree = "<group>"; };
 		9FD3F4E620CBCCEF00C5EE19 /* DownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		9FD3F4E720CBCCEF00C5EE19 /* DownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		9FD3F4E820CBCCEF00C5EE19 /* DownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadViewController.xib; sourceTree = "<group>"; };
 		9FD3F4EB20CBCD1F00C5EE19 /* ContributeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContributeViewController.h; sourceTree = "<group>"; };
 		9FD3F4EC20CBCD1F00C5EE19 /* ContributeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContributeViewController.m; sourceTree = "<group>"; };
 		9FD3F4ED20CBCD1F00C5EE19 /* ContributeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContributeViewController.xib; sourceTree = "<group>"; };
-		9FD3F4F020CBCD2B00C5EE19 /* NoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
-		9FD3F4F120CBCD2B00C5EE19 /* NoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
-		9FD3F4F220CBCD2B00C5EE19 /* NoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
 		9FD3F4F520CBCD3D00C5EE19 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		9FD3F4F620CBCD3D00C5EE19 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		9FD3F4F720CBCD3D00C5EE19 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -473,18 +466,12 @@
 				9FD3F4DC20CBCCD000C5EE19 /* SettingViewController.h */,
 				9FD3F4DD20CBCCD000C5EE19 /* SettingViewController.m */,
 				9FD3F4DE20CBCCD000C5EE19 /* SettingViewController.xib */,
-				9FD3F4E120CBCCE000C5EE19 /* FootPrintViewController.h */,
-				9FD3F4E220CBCCE000C5EE19 /* FootPrintViewController.m */,
-				9FD3F4E320CBCCE000C5EE19 /* FootPrintViewController.xib */,
 				9FD3F4E620CBCCEF00C5EE19 /* DownloadViewController.h */,
 				9FD3F4E720CBCCEF00C5EE19 /* DownloadViewController.m */,
 				9FD3F4E820CBCCEF00C5EE19 /* DownloadViewController.xib */,
 				9FD3F4EB20CBCD1F00C5EE19 /* ContributeViewController.h */,
 				9FD3F4EC20CBCD1F00C5EE19 /* ContributeViewController.m */,
 				9FD3F4ED20CBCD1F00C5EE19 /* ContributeViewController.xib */,
-				9FD3F4F020CBCD2B00C5EE19 /* NoteViewController.h */,
-				9FD3F4F120CBCD2B00C5EE19 /* NoteViewController.m */,
-				9FD3F4F220CBCD2B00C5EE19 /* NoteViewController.xib */,
 				9FD3F4F520CBCD3D00C5EE19 /* AboutViewController.h */,
 				9FD3F4F620CBCD3D00C5EE19 /* AboutViewController.m */,
 				9FD3F4F720CBCD3D00C5EE19 /* AboutViewController.xib */,
@@ -688,7 +675,7 @@
 			isa = PBXGroup;
 			children = (
 				9FCA4C1420C8164300F389A1 /* Category */,
-				9FCA4C3720C8164300F389A1 /* Custome */,
+				9FCA4C3720C8164300F389A1 /* Custom */,
 				9FCA4C5020C8164300F389A1 /* Resource */,
 			);
 			path = Others;
@@ -804,13 +791,13 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		9FCA4C3720C8164300F389A1 /* Custome */ = {
+		9FCA4C3720C8164300F389A1 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				9FCA4C3820C8164300F389A1 /* Foundation */,
 				9FCA4C3920C8164300F389A1 /* UIKit */,
 			);
-			path = Custome;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		9FCA4C3820C8164300F389A1 /* Foundation */ = {
@@ -823,6 +810,8 @@
 		9FCA4C3920C8164300F389A1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9F413C3B20E622E900B63077 /* CustomImageBrowser.h */,
+				9F413C3C20E622E900B63077 /* CustomImageBrowser.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1107,7 +1096,6 @@
 				9FD3F4C420CB879F00C5EE19 /* EssenceCell.xib in Resources */,
 				9F02EB8E20C4DA5D00A57AA1 /* LaunchScreen.storyboard in Resources */,
 				9F02EB8B20C4DA5D00A57AA1 /* Assets.xcassets in Resources */,
-				9FD3F4F420CBCD2B00C5EE19 /* NoteViewController.xib in Resources */,
 				9FCA4C7020C8164300F389A1 /* error.png in Resources */,
 				9F02EBBD20C4DD3E00A57AA1 /* HomeViewController.xib in Resources */,
 				9FD3F4F920CBCD3D00C5EE19 /* AboutViewController.xib in Resources */,
@@ -1133,7 +1121,6 @@
 				9FE812A620D7ECDC002A70F3 /* LYCustomAlertView.xib in Resources */,
 				9FD3F4EA20CBCCEF00C5EE19 /* DownloadViewController.xib in Resources */,
 				9FD3F4EF20CBCD1F00C5EE19 /* ContributeViewController.xib in Resources */,
-				9FD3F4E520CBCCE000C5EE19 /* FootPrintViewController.xib in Resources */,
 				9FCA4C7120C8164300F389A1 /* error@2x.png in Resources */,
 				9FD3F4DB20CBCCBA00C5EE19 /* FavoriteViewController.xib in Resources */,
 				9FCA4C7220C8164300F389A1 /* MBProgressHUD.bundle in Resources */,
@@ -1235,13 +1222,13 @@
 				9FD3F4EE20CBCD1F00C5EE19 /* ContributeViewController.m in Sources */,
 				9FCA4C0820C80D9E00F389A1 /* HomeTool.m in Sources */,
 				9FD3F4DA20CBCCBA00C5EE19 /* FavoriteViewController.m in Sources */,
-				9FD3F4E420CBCCE000C5EE19 /* FootPrintViewController.m in Sources */,
 				9FCA4BF920C7B44100F389A1 /* WaterFlowLayout.m in Sources */,
 				9FCA4C6420C8164300F389A1 /* UIViewController+Addition.m in Sources */,
 				9FCA4C6020C8164300F389A1 /* UILabel+Addition.m in Sources */,
 				9FCA4C0220C7C8E400F389A1 /* PopView.m in Sources */,
 				9FC3130020C66A2E00AA66C1 /* EssenceViewController.m in Sources */,
 				9FC312E320C63AE700AA66C1 /* topScrollView.m in Sources */,
+				9F413C3D20E622E900B63077 /* CustomImageBrowser.m in Sources */,
 				9FCA4C5D20C8164300F389A1 /* UIBarButtonItem+Addition.m in Sources */,
 				9FCA4C5C20C8164300F389A1 /* CALayer+Addition.m in Sources */,
 				9FC312EC20C652D500AA66C1 /* MineViewController.m in Sources */,
@@ -1253,7 +1240,6 @@
 				9FDDAC4120D3B5470059B529 /* UserModel.m in Sources */,
 				9FCA4C5E20C8164300F389A1 /* UIButton+Addition.m in Sources */,
 				9FC3130520C66A4B00AA66C1 /* WelfareViewController.m in Sources */,
-				9FD3F4F320CBCD2B00C5EE19 /* NoteViewController.m in Sources */,
 				9FE812AA20D7EE6B002A70F3 /* SetInfoViewController.m in Sources */,
 				9FCA4C6320C8164300F389A1 /* UIView+Layer.m in Sources */,
 				9FCA4C7920C8339300F389A1 /* HomeCell.m in Sources */,

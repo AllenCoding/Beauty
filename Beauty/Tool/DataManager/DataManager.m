@@ -65,11 +65,15 @@ static DataManager*_manager;
 
 -(void)createDatabase{
     NSString*userSql=@"create table if not exists user(userId integer primary key autoincrement,userPhone text,userPswd,userNickname text,userHead text,userSex text,userDes text)";
-    BOOL user=[dataBase executeUpdate:userSql];
-    if (user) {
-        NSLog(@"建表成功");
+    [dataBase executeUpdate:userSql];
+    
+    NSString*pictureSql=@"create table if not exists pictures(pictureId integer primary key autoincrement,downloaduser,downloadId text,downloadurl,uploadername text,uploadtime text)";
+    
+    BOOL success= [dataBase executeUpdate:pictureSql];
+    if (success) {
+        NSLog(@"下载建表成功");
     }else{
-        NSLog(@"建表失败");
+        NSLog(@"下载建表失败");
     }
 }
 
@@ -113,6 +117,54 @@ static DataManager*_manager;
 -(BOOL)isExistWithPhone:(NSString *)phone{
     return [dataBase intForQuery:@"select count(*) from user where userPhone=?",phone];
 }
+
+
+
+#pragma mark  下载列表
+-(void)downloadByDataModel:(HomeData *)data{
+    NSString*download_sql=@"insert into pictures (downloaduser,downloadId,downloadurl,uploadername,uploadtime) values(?,?,?,?,?)";
+    BOOL isOk=[dataBase executeUpdate:download_sql,userPhoneNumber,data._id,data.url,data.who,data.publishedAt];
+    if (isOk) {
+        NSLog(@"下载成功");
+    }else{
+        NSLog(@"下载失败");
+    }
+}
+-(BOOL)isDownLoaded:(NSString *)downloadId{
+    return [dataBase intForQuery:@"select count(*) from pictures where downloadId=? and downloaduser =?",downloadId,userPhoneNumber];
+}
+-(NSArray *)downloads{
+    
+//    NSString*selectall=[NSString stringWithFormat:@"select * from pictures  where downloaduser=?  order by pictureId desc limit %ld,20",(page-1)*20];
+    NSString*selectall=@"select * from pictures  where downloaduser=?";
+    FMResultSet *set=[dataBase executeQuery:selectall,userPhoneNumber];
+    NSMutableArray*datasource=[NSMutableArray new];
+    while ([set next]) {
+        HomeData*data=[[HomeData alloc]init];
+        data._id=[set stringForColumn:@"downloadId"];
+        data.url=[set stringForColumn:@"downloadurl"];
+        data.who=[set stringForColumn:@"uploadername"];
+        data.publishedAt=[set stringForColumn:@"uploadtime"];
+        [datasource addObject:data];
+    }
+    return [NSArray arrayWithArray:datasource];
+}
+
+-(void)deleteDownloadsById:(NSString *)downloadId{
+    NSString*sql_delete=@"delete from pictures where downloadId= ?";
+    BOOL isOk= [dataBase executeUpdate:sql_delete,downloadId];
+    if (isOk) {
+        NSLog(@"下载删除成功");
+    }else{
+        NSLog(@"下载删除失败");
+    }
+}
+
+
+
+
+
+
 
 @end
 

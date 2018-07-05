@@ -22,8 +22,14 @@
     _model=model;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:model.url] placeholderImage:[UIImage imageNamed:@"placeholder_image"]];
     self.timeLabel.text=[model.publishedAt substringToIndex:10];
-    
 }
+
+-(void)setData:(HomeData *)data{
+    _data=data;
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:data.url] placeholderImage:[UIImage imageNamed:@"placeholder_image"]];
+    self.timeLabel.text=[data.publishedAt substringToIndex:10];
+}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

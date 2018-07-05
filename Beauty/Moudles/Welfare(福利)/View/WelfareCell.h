@@ -11,4 +11,5 @@
 
 @interface WelfareCell : UICollectionViewCell
 @property(nonatomic,strong)WelfareModel*model;
+@property(nonatomic,strong)HomeData*data;
 @end

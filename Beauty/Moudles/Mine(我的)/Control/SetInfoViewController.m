@@ -22,7 +22,6 @@
     self.tipLabel.text=self.type==1?@"*昵称右4-10个英文字母、汉字或者符号组成":@"*个性签名不多于15个字";
     self.title=self.type==1?@"修改昵称":@"修改签名";
     self.inputTF.text=self.type==1?[DataManager shareManager].userInfo.userNickname:[DataManager shareManager].userInfo.userDes;
-
 }
 
 - (IBAction)updateInfo:(UIButton *)sender {
@@ -37,7 +36,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 /*

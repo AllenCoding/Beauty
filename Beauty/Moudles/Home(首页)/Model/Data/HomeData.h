@@ -23,5 +23,8 @@
 @property(nonatomic,copy)NSString*readability;
 @property(nonatomic,copy)NSString*ganhuo_id;
 
+@property(nonatomic,assign)NSInteger pictureId;
+@property(nonatomic,copy)NSString*owner;
+
 
 @end

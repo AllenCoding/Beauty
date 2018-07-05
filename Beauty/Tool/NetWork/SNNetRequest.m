@@ -59,9 +59,7 @@
         params = @{};
     }
     
-  NSString*  urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
-    
+    NSString*  urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[SNNetRequestManager shareRequestManager] GET:urlString parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
