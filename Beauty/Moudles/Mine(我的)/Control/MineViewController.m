@@ -26,8 +26,6 @@
 @implementation MineViewController
 
 
-
-
 -(NSMutableArray *)data{
     if (!_data) {
         NSArray*dataSource=@[
@@ -107,18 +105,25 @@
     }
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=@"我的";
 }
 
+
+
+
+
+
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.data.count;
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.data[section] count];
 }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
@@ -133,15 +138,19 @@
     self.tableview.separatorStyle=UITableViewCellSeparatorStyleNone;
     return cell;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return section==0?210:10;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.001;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 45;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController*vc=nil;
     if (indexPath.section==0) {
@@ -162,6 +171,7 @@
             }
                 break;
         }
+        
     }else if (indexPath.section==1){
         switch (indexPath.row) {
             case 0:{
@@ -181,8 +191,6 @@
                 NSLog(@"推荐好友");
             }
                 break;
-                
-                
         }
     }
     if (vc!=nil) {
@@ -205,8 +213,6 @@
     [self.navigationController pushViewController:user animated:YES];
 
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
